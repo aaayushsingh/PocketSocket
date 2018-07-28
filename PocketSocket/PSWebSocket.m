@@ -245,14 +245,14 @@
         }
     }];
 }
-- (void)ping:(NSData *)pingData handler:(void (^)(NSData *pongData))handler {
-    [self executeWork:^{
-        if(handler) {
-            [_pingHandlers addObject:handler];
-        }
-        [_driver sendPing:pingData];
-    }];
-}
+// - (void)ping:(NSData *)pingData handler:(void (^)(NSData *pongData))handler {
+//     [self executeWork:^{
+//         if(handler) {
+//             [_pingHandlers addObject:handler];
+//         }
+//         [_driver sendPing:pingData];
+//     }];
+// }
 - (void)close {
     [self closeWithCode:1000 reason:nil];
 }

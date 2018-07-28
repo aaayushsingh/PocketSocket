@@ -39,10 +39,10 @@
 
 #pragma mark - Properties
 
-@property (nonatomic, assign, readonly) PSWebSocketMode mode;
-@property (nonatomic, weak) id <PSWebSocketDriverDelegate> delegate;
+@property(nonatomic, assign, readonly) PSWebSocketMode mode;
+@property(nonatomic, weak) id<PSWebSocketDriverDelegate> delegate;
 
-@property (nonatomic, strong) NSString *protocol;
+@property(nonatomic, strong) NSString *protocol;
 
 #pragma mark - Initialization
 
@@ -55,7 +55,7 @@
 - (void)sendText:(NSString *)text;
 - (void)sendBinary:(NSData *)binary;
 - (void)sendCloseCode:(NSInteger)code reason:(NSString *)reason;
-- (void)sendPing:(NSData *)data;
+// - (void)sendPing:(NSData *)data;
 - (void)sendPong:(NSData *)data;
 
 - (NSUInteger)execute:(void *)bytes maxLength:(NSUInteger)maxLength;

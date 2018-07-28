@@ -191,9 +191,9 @@ typedef NS_ENUM(NSInteger, PSWebSocketDriverState) {
     }
     [self writeMessageWithOpCode:PSWebSocketOpCodeClose data:data];
 }
-- (void)sendPing:(NSData *)data {
-    [self writeMessageWithOpCode:PSWebSocketOpCodePing data:data];
-}
+// - (void)sendPing:(NSData *)data {
+//     [self writeMessageWithOpCode:PSWebSocketOpCodePing data:data];
+// }
 - (void)sendPong:(NSData *)data {
     [self writeMessageWithOpCode:PSWebSocketOpCodePong data:data];
 }
