@@ -152,6 +152,7 @@
     return [[self alloc] initClientSocketWithRequest:request];
 }
 - (instancetype)initClientSocketWithRequest:(NSURLRequest *)request {
+    NSLog(@"Can anyone hear me?");
 	if((self = [self initWithMode:PSWebSocketModeClient request:request])) {
         NSURL *URL = request.URL;
         NSString *host = URL.host;
